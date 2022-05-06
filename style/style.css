@@ -92,6 +92,7 @@ i {
 @media screen and (max-width: 684px) {
   main {
     padding-left: 30px;
+    padding-bottom: 30px;
   }
   nav {
     padding-left: 0px !important;

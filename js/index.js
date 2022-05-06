@@ -15,19 +15,11 @@ let leftdetail = blockLeft.querySelectorAll('span');
 let [leftfrom, leftrate, leftto] = leftdetail;
 let rightdetail = blockRight.querySelectorAll('span');
 let [rightfrom, rightrate, rightto] = rightdetail;
-fetch(`https://api.exchangerate.host/convert?from=RUB&to=USD`)
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data)
-    console.log(data.info.rate)
-  });
-const info = () => {
+const info =  () => {
   var todayDate = new Date().toISOString().slice(0, 10);
-  fetch(`https://api.exchangerate.host/convert?from=${valueLeft}&to=${valueRight}&date=${todayDate}`)
+   fetch(`https://api.exchangerate.host/convert?from=${valueLeft}&to=${valueRight}&date=${todayDate}`)
     .then((response) => {
-      return response.json();
+      return  response.json();
     })
     .then((leftdata) => {
       leftfrom.innerText = valueLeft;
@@ -37,9 +29,9 @@ const info = () => {
       leftrate.innerText = leftdata.info.rate;
       rightfrom.innerText = valueRight;
       rightto.innerText = valueLeft;
-      fetch(`https://api.exchangerate.host/convert?from=${valueRight}&to=${valueLeft}&date=${todayDate}`)
+       fetch(`https://api.exchangerate.host/convert?from=${valueRight}&to=${valueLeft}&date=${todayDate}`)
         .then((response) => {
-          return response.json();
+          return  response.json();
         })
         .then((rightdata) => {
           rightrate.innerText = rightdata.info.rate
@@ -49,13 +41,13 @@ const info = () => {
 
 info()
 
-const leftCalculator = () => {
+const leftCalculator =  () => {
   let calcvalue = leftcalcvalue.value.split(" ");
   calcvalue = calcvalue.join("");
   calcvalue = Number(calcvalue);
-  fetch(`https://api.exchangerate.host/convert?from=${valueLeft}&to=${valueRight}&amount=${calcvalue}`)
+   fetch(`https://api.exchangerate.host/convert?from=${valueLeft}&to=${valueRight}&amount=${calcvalue}`)
     .then((response) => {
-      return response.json();
+      return  response.json();
     })
     .then((data) => {
       rightcalcvalue.value = data.result;
@@ -66,18 +58,18 @@ const leftCalculator = () => {
         padFractionalZeros: false,
         radix: '.',
         mapToRadix: [','],
-        scale: 6
+        scale: 2
       });
     });
 
 }
-const rightCalculator = () => {
+const rightCalculator =  () => {
   let calcvalue = rightcalcvalue.value.split(" ");
   calcvalue = calcvalue.join("");
   calcvalue = Number(calcvalue);
   fetch(`https://api.exchangerate.host/convert?from=${valueRight}&to=${valueLeft}&amount=${calcvalue}`)
     .then((response) => {
-      return response.json();
+      return  response.json();
     })
     .then((data) => {
       leftcalcvalue.value = data.result;
@@ -88,7 +80,7 @@ const rightCalculator = () => {
         padFractionalZeros: false,
         radix: '.',
         mapToRadix: [','],
-        scale: 6
+        scale: 2
       });
     })
 }
