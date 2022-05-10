@@ -31,9 +31,9 @@ i {
 .side-menu li {
   margin-top: 18px;
   width: 100%;
-  padding: 20px;
+  padding: 16px;
   color: white !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 
 .side-menu li:hover {
@@ -78,9 +78,6 @@ i {
     display: -ms-flexbox;
     display: flex;
   }
-  .container {
-    width: 740px;
-  }
   #menu-logo {
     display: none;
   }
@@ -94,11 +91,7 @@ i {
     padding-left: 30px;
     padding-bottom: 30px;
   }
-  nav {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-  .blocks-container {
+  .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -106,6 +99,13 @@ i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
   .logo {
     display: none;
@@ -121,6 +121,18 @@ i {
   }
   .login i {
     margin-right: 20px;
+  }
+  .container {
+    width: 100% !important;
+  }
+  h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
 }
 
@@ -139,6 +151,42 @@ i {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+  .blocks-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .block {
+    width: 90% !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 839px) and (max-width: 1172px) {
+  .container {
+    width: 65% !important;
   }
 }
 
@@ -218,6 +266,8 @@ nav .login button {
 
 main {
   width: 100%;
+  height: 90vh;
+  border: 1px solid transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,6 +278,10 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .container {
+  width: 53%;
 }
 
 main .container h1 {
@@ -244,8 +298,16 @@ main .container .blocks-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 123px;
-          column-gap: 123px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container .blocks-container .block {
+  min-width: 259px;
+  max-width: 380px;
+  width: 45%;
 }
 
 main .container .blocks-container .block .block-head {
@@ -259,7 +321,7 @@ main .container .blocks-container .block .block-head {
 }
 
 main .container .blocks-container .block .radio {
-  width: 259px;
+  width: 100%;
   height: 30px;
   overflow: hidden;
   background-color: white;
@@ -276,6 +338,7 @@ main .container .blocks-container .block .radio .radio_input {
 }
 
 main .container .blocks-container .block .radio .radio_label {
+  width: 100%;
   color: #c6c6c6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,7 +353,6 @@ main .container .blocks-container .block .radio .radio_label {
   border: none;
   outline: none;
   cursor: pointer;
-  width: 64.75px;
   height: 28px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -307,8 +369,7 @@ main .container .blocks-container .block .radio .radio_input:checked + .radio_la
 }
 
 main .container .blocks-container .block .calculate-area {
-  width: 259px;
-  min-height: 102px;
+  min-height: 110px;
   height: auto;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
@@ -324,9 +385,11 @@ main .container .blocks-container .block .calculate-area {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 20px;
+  width: 100%;
 }
 
 main .container .blocks-container .block .calculate-area .calc-value {
+  width: 100%;
   border: none;
   outline: none;
   font-family: "Roboto";

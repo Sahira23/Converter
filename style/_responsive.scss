@@ -21,9 +21,9 @@ i {
     li {
         margin-top: 18px;
         width: 100%;
-        padding: 20px;
+        padding: 16px;
         color: white !important;
-        font-size: 14px !important;
+        font-size: 15px !important;
         &:hover {
             border-bottom: 1px solid white;
             border-top: 1px solid white;
@@ -41,12 +41,12 @@ i {
     .menu {
         display: none;
     }
-    .login{
+    .login {
         width: 40%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        button{
+        button {
             font-size: 0.688rem;
             margin-right: 25px;
         }
@@ -56,14 +56,11 @@ i {
     .menu {
         display: flex;
     }
-    .container {
-        width: 740px;
-    }
     #menu-logo {
         display: none;
     }
-    .login{
-        button{
+    .login {
+        button {
             font-size: 11px;
         }
     }
@@ -74,26 +71,35 @@ i {
         padding-left: 30px;
         padding-bottom: 30px;
     }
-    nav{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-    .blocks-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .logo{
+    .logo {
         display: none;
     }
-.login{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    i{
-        margin-right: 20px;
+    .login {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        i {
+            margin-right: 20px;
+        }
     }
-}
-
+        .container{
+        width: 100% !important;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+  
 }
 @media screen and (max-width: 838px) {
     nav {
@@ -103,5 +109,27 @@ i {
     .menu-logo {
         display: flex;
         justify-content: flex-end;
+    }
+    .blocks-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block{
+        width: 90% !important;
+    }
+    h1{
+        font-size: 2rem !important;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:839px) and (max-width:1172px){
+    .container{
+        width: 65% !important;
     }
 }

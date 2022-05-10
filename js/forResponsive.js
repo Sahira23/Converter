@@ -1,4 +1,4 @@
-
+// creating side-menu
 let menu=document.querySelector('.menu')
 let clonedMenu=menu.cloneNode(true);
 let nav=document.querySelector('nav');
