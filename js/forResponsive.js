@@ -12,7 +12,7 @@ const appear=()=>{
   let firstli=clonedMenu.querySelector('li:first-child');
   clonedMenu.insertBefore(remove,firstli);
   remove.classList.add('fa-solid','fa-xmark');
-  remove.style.position="absolute";
+  remove.style.position="fixed";
   remove.style.top="20px"
   remove.style.right="20px";
   remove.style.cursor="pointer"

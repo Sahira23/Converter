@@ -18,6 +18,9 @@ i {
     bottom: 0;
     transition: width 4s;
     padding: 20px;
+    max-height: 500px;
+    overflow:hidden; 
+    overflow-y:scroll !important;
     li {
         margin-top: 18px;
         width: 100%;
